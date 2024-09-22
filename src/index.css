@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+
+body{
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.bg-img {
+  background-image: url("../src/assets//bg-img5.png");
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%; /* Position it above the skill */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px; /* Space between the skill and tooltip */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: white; /* White text */
+  padding: 12px; /* Larger padding for more space */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Centered text */
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  width: 200px; /* Set a fixed width for consistency */
+}
+
+.group:hover .tooltip {
+  opacity: 1; /* Show tooltip */
+  visibility: visible; /* Make it visible */
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease;
+}
